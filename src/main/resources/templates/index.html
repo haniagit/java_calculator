@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body bgcolor="#99CC66">
+<hr>
+    SIMPLE CALCULATOR
+    <br>
+        <hr>
+
+            <center><img src="https://m.media-amazon.com/images/S/aplus-media/mg/794833f8-32c7-4bcf-b4e9-553a048d2d9f.png" style="max-width:20%;" ></center>
+        <hr>
+    <center>RESULT: <p type="text" th:text="${result}" type="text" ></center>
+    <br>
+    <form method="post" th:action="@{/}" th:object="${operationModel}">
+        <input type="text" th:field="*{a}" placeholder="0">     <input type="text" th:field="*{b}" placeholder="0">
+        <br>
+        CHOOSE OPERATION:
+        <br>
+            <input type="submit" class="button" name="add" value="+">
+            <input type="submit" class="button" name="sub" value="-">
+            <input type="submit" class="button" name="mul" value="*">
+            <input type="submit" class="button" name="div" value="/">
+        <br>
+    </form>
+<hr>
+    <br>
+    AVERAGE CALCULATOR
+        <form method="post" th:action="@{/}" th:object="${operationModel}">
+            <input type="text" th:field="*{a}" placeholder="0">
+            <br>
+            CHOOSE OPERATION:
+            <br>
+            <input type="submit" class="button" name="sqr" value="Kwadrat Liczby">
+            <input type="submit" class="button" name="ele" value="Suma od 1 do n">
+            <input type="submit" class="button" name="fac" value="Silnia">
+            <input type="submit" class="button" name="prm" value="Czy Pierwsza?">
+        </form>
+
+</body>
+</html>
