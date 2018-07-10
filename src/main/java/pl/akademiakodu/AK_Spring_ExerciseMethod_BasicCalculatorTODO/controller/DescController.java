@@ -49,7 +49,7 @@ public class DescController {
     }
 
     @GetMapping("/result")
-    public String result(@RequestParam
+    public String result(@RequestParam //adnotacja
                                  String firstName,
                          @RequestParam String lastName,
                          ModelMap modelMap) {
