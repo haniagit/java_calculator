@@ -84,8 +84,9 @@ public class CalculatorController {
             model.addAttribute("result", calculatorSimple.division(operationModel.getA(), operationModel.getB()));
         } catch (IllegalArgumentException e) {
             model.addAttribute("result", e.getMessage());
+        } finally {
+            return "index";
         }
-        return "index";
     }
 
     /**
